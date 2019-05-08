@@ -45,7 +45,7 @@ int ModelInit(const std::string &model_path) {
 }
 
 int ModelInference(const char* input_buffer, int input_buffer_size,
-                   float* &output_buffer, int &output_buffer_size) {
+                   float** output_buffer, int** output_buffer_size) {
   return model_inference_obj.Inference(input_buffer, input_buffer_size,
                                        output_buffer, output_buffer_size);
 }
